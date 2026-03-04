@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="checkLogin();loadDashboard()">
+
+<nav>
+
+<h1>🎬 Movie Maniac</h1>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="dashboard.html">Dashboard</a></li>
+<li><a href="#" onclick="logout()">Logout</a></li>
+</ul>
+
+</nav>
+
+<div class="container">
+
+<h2>User Dashboard</h2>
+
+<div class="section">
+
+<h3>Wishlist</h3>
+
+<div id="wishlist"></div>
+
+</div>
+
+<div class="section">
+
+<h3>Watched Movies</h3>
+
+<div id="watched"></div>
+
+</div>
+
+<div class="section">
+
+<h3>Recommended Movies</h3>
+
+<p>Recommended movies will appear here</p>
+
+</div>
+
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/movies.js"></script>
+
+</body>
+</html>
