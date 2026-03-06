@@ -22,11 +22,18 @@ function escapeHtml(text) {
 
 function renderOttProviders(movie) {
   const providers = movie.ottProviders || [];
-  if (!providers.length) {
-    return `<p class="ott-empty">Streaming information not available</p>`;
-  }
+  const link = movie.ottLink || "";
 
-  const link = movie.ottLink || "#";
+  if (!providers.length) {
+    return `
+      <p class="ott-empty">Streaming information not available</p>
+      ${
+        link
+          ? `<a class="ott-link" href="${link}" target="_blank" rel="noopener noreferrer">Check on TMDB</a>`
+          : ""
+      }
+    `;
+  }
 
   return `
     <div class="ott-providers ott-platforms">
@@ -41,6 +48,11 @@ function renderOttProviders(movie) {
         )
         .join("")}
     </div>
+    ${
+      link
+        ? `<a class="ott-link" href="${link}" target="_blank" rel="noopener noreferrer">View all streaming options</a>`
+        : ""
+    }
   `;
 }
 

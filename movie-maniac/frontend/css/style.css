@@ -273,8 +273,12 @@ button:hover {
 }
 
 .ott-link {
+  display: inline-block;
+  margin-top: 0.4rem;
   color: var(--accent);
   text-decoration: underline;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .ott-section {
