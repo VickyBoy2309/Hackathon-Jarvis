@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Maniac | Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html">Movie Maniac</a>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./index.html">Discover</a>
+        <button id="logoutBtn" class="link-button">Logout</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="dashboard-main">
+        <aside class="profile-card" id="profileCard">
+          <div class="profile-photo-wrap">
+            <img id="profilePhoto" class="profile-photo" src="" alt="Profile photo" />
+          </div>
+          <h2 id="profileName">Movie Lover</h2>
+          <p id="profileEmail">email@example.com</p>
+          <p id="profileMemberSince" class="member-since">Member since -</p>
+        </aside>
+
+        <section class="dashboard-stats">
+          <div class="stats-grid" id="statsGrid"></div>
+          <article class="chart-card">
+            <h3>Weekly Watched Minutes</h3>
+            <canvas id="weeklyChart" height="120"></canvas>
+          </article>
+        </section>
+      </section>
+
+      <section>
+        <h2 class="section-title">Watched Movies</h2>
+        <div id="watchedGrid" class="movie-grid"></div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Wishlist Movies</h2>
+        <div id="watchlistGrid" class="movie-grid"></div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Recommended for You</h2>
+        <p id="topGenres" class="movie-meta"></p>
+        <div id="recommendationsGrid" class="movie-grid"></div>
+      </section>
+    </main>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>

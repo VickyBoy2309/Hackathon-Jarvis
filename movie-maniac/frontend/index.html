@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Maniac | Home</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html">Movie Maniac</a>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./login.html" id="authLink">Login</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section id="featuredBanner" class="hero-banner">
+        <div class="hero-overlay">
+          <p class="hero-kicker">Featured Movie</p>
+          <h1 id="featuredTitle">Loading...</h1>
+          <p id="featuredMeta" class="hero-meta"></p>
+          <p id="featuredOverview" class="hero-overview"></p>
+          <div class="hero-actions">
+            <button id="featuredWatchedBtn" data-action="watched" data-id="">Watched</button>
+            <button id="featuredWishlistBtn" data-action="wishlist" data-id="">Wishlist</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Popular Movies</h2>
+        <div id="popularGrid" class="popular-row"></div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Upcoming Movies</h2>
+        <div id="upcomingGrid" class="movie-grid"></div>
+      </section>
+    </main>
+
+    <div id="detailsModal" class="modal hidden">
+      <div class="modal-card">
+        <button id="closeModalBtn" class="modal-close" aria-label="Close">&times;</button>
+        <div id="detailsContent"></div>
+      </div>
+    </div>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/movies.js"></script>
+  </body>
+</html>
